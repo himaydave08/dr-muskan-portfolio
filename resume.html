@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Dr. Musarath Muskan, Pharm.D</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apple-Style Minimalist Resume */
+        :root {
+            --text-primary: #1d1d1f;
+            --text-secondary: #86868b;
+            --accent-blue: #0066cc;
+            --border-color: #e8e8ed;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-primary);
+            background-color: #f5f5f7;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .resume-page {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 4rem 5rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+        }
+
+        .header {
+            border-bottom: 2px solid var(--text-primary);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .name {
+            font-size: 2.75rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.25rem;
+        }
+        
+        .title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+        .contact-info span::after {
+            content: "•";
+            margin-left: 1.5rem;
+            color: var(--border-color);
+        }
+        .contact-info span:last-child::after {
+            content: "";
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 2.2fr 1fr;
+            gap: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            margin-top: 2.5rem;
+        }
+        .section-title:first-child { margin-top: 0; }
+
+        .job-item { margin-bottom: 2rem; }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.25rem;
+        }
+        .job-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+        .job-date {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        .job-company {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--accent-blue);
+            margin-bottom: 0.75rem;
+        }
+        ul.job-bullets {
+            list-style-type: disc;
+            padding-left: 1.2rem;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+        ul.job-bullets li { margin-bottom: 0.4rem; line-height: 1.5; }
+
+        .research-item { margin-bottom: 1.25rem; }
+        .research-title { font-weight: 600; font-size: 0.95rem; }
+        .research-meta { font-size: 0.85rem; color: var(--text-secondary); }
+
+        .sidebar-item { margin-bottom: 1.5rem; }
+        .sidebar-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.25rem; }
+        .sidebar-meta { color: var(--text-secondary); font-size: 0.9rem; }
+        .skill-list { font-size: 0.9rem; color: var(--text-primary); line-height: 1.8; }
+
+        .actions { text-align: center; margin-bottom: 2rem; }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--text-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .btn:hover { background-color: var(--accent-blue); }
+
+        /* Print formatting */
+        @media print {
+            body { background-color: white; padding: 0; font-size: 11pt; line-height: 1.4; }
+            .resume-page { box-shadow: none; padding: 0; margin: 0; max-width: 100%; }
+            .actions { display: none; }
+            
+            /* Maintain 2-column layout to save vertical space */
+            .resume-grid { 
+                display: grid; 
+                grid-template-columns: 2.2fr 1fr; 
+                gap: 2.5rem; 
+            }
+            .sidebar { margin-top: 0; }
+            
+            /* Tighten margins to fit on 2 pages */
+            @page { margin: 1cm; }
+            .header { padding-bottom: 1rem; margin-bottom: 1.5rem; }
+            .name { font-size: 2.2rem; }
+            .title { font-size: 1.1rem; margin-bottom: 0.5rem; }
+            .section-title { margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1rem; }
+            .job-item { margin-bottom: 1rem; }
+            ul.job-bullets li { margin-bottom: 0.2rem; }
+            .research-item { margin-bottom: 0.5rem; }
+            .sidebar-item { margin-bottom: 0.75rem; }
+            
+            /* Prevent items from splitting across pages */
+            .job-item, .research-item, .skill-list, .sidebar section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="actions">
+        <a href="index.html" class="btn" style="background: transparent; color: var(--text-primary); border: 1px solid var(--border-color); margin-right: 1rem;">&larr; Back to Portfolio</a>
+        <button onclick="window.print()" class="btn">Print / Save as PDF</button>
+    </div>
+
+    <div class="resume-page">
+        <!-- HEADER -->
+        <header class="header">
+            <h1 class="name">Dr. Musarath Muskan</h1>
+            <div class="title">Clinical Pharmacologist | Oncology Medical Affairs</div>
+            <div class="contact-info">
+                <span><a href="mailto:musrathmuskan@gmail.com" style="color: inherit; text-decoration: none;">musrathmuskan@gmail.com</a></span>
+                <span><a href="tel:+917204271538" style="color: inherit; text-decoration: none;">+91 7204271538</a></span>
+                <span>Bengaluru, India</span>
+                <span><a href="https://www.linkedin.com/in/dr-musarath-muskan-1335891b9" target="_blank" style="color: inherit; text-decoration: none;">linkedin.com/in/dr-musarath-muskan</a></span>
+            </div>
+        </header>
+
+        <div class="resume-grid">
+            <!-- MAIN CONTENT -->
+            <div class="main-content">
+                <section>
+                    <h2 class="section-title">Professional Summary</h2>
+                    <p style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 1rem;">
+                        Clinical Pharmacologist with hands-on experience in medical oncology, supporting cancer care through chemotherapy protocol review, treatment coordination, medication management, and evidence-based clinical support. Experienced working closely with oncologists and multidisciplinary teams in real-world settings, with practical exposure to systemic therapy workflows and patient-specific oncology care.
+                    </p>
+                    <p style="font-size: 0.95rem; color: var(--text-primary);">
+                        Strong interest in the intersection of oncology, guideline-based treatment pathways, clinical decision support, and digital health innovation. Adept at interpreting complex oncology treatment information and translating it into clear, structured, and clinically usable workflows.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Professional Experience</h2>
+                    
+                    <div class="job-item">
+                        <div class="job-header">
+                            <div class="job-title">Clinical Application Specialist – Oncology</div>
+                            <div class="job-date">April 2026 – Present</div>
+                        </div>
+                        <div class="job-company">FhirEngine Inc. (OncoSure)</div>
+                        <ul class="job-bullets">
+                            <li>Evaluate and interpret continuous updates from NCCN Guidelines and translate clinical logic into structured JSON-based workflows.</li>
+                            <li>Collaborate cross-functionally with engineering and clinical teams to validate decision support algorithms for clinical accuracy.</li>
+                            <li>Ensure clinical systems remain aligned with the latest evidence-based oncology standards of care.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-item">
+                        <div class="job-header">
+                            <div class="job-title">Clinical Pharmacologist / Clinical Pharmacist</div>
+                            <div class="job-date">Feb 2024 – March 2026</div>
+                        </div>
+                        <div class="job-company">Apollo Hospitals (JCIA Accredited), Bengaluru</div>
+                        <ul class="job-bullets">
+                            <li>Worked closely with the medical oncology team supporting patient-specific cancer treatment workflows and medication-related clinical decision processes.</li>
+                            <li>Reviewed chemotherapy and supportive care plans with attention to regimen components, dosing appropriateness, and medication safety.</li>
+                            <li>Assisted in interpretation of oncology treatment regimens, including therapy sequencing and regimen-related clinical considerations.</li>
+                            <li>Supported the safe and rational use of anticancer therapies, including chemotherapy, targeted therapies, and hormonal therapy.</li>
+                            <li>Collaborated with clinicians, nurses, and pharmacy teams to support smooth execution of oncology treatment plans.</li>
+                            <li>Assisted in identifying and monitoring adverse drug reactions, toxicity concerns, and supportive care needs during cancer treatment.</li>
+                            <li><strong>Pathways & Protocol-Relevant Contributions:</strong> Developed familiarity with protocol-based treatment planning and translating complex oncology treatment information into clear, structured, actionable clinical understanding.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Research Experience</h2>
+                    <div class="research-item">
+                        <div class="research-title">Fatigue Associated with Immune Therapies: Contextualizing Patterns and Analyzing Associated Factors During Treatment</div>
+                        <div class="research-meta">Apollo Hospital, 2025</div>
+                    </div>
+                    <div class="research-item">
+                        <div class="research-title">Barriers to Real-World Implementation of Diagnostic Genomics: Quantifying Genomic Awareness and Access in Indian Oncology Care</div>
+                        <div class="research-meta">Apollo Hospital, 2025</div>
+                    </div>
+                    <div class="research-item">
+                        <div class="research-title">Live and Let Flare: Severe Dermatologic Immune-Related Adverse Events as Indicators of Oncologic Response</div>
+                        <div class="research-meta">Apollo Hospital, 2025</div>
+                    </div>
+                    <div class="research-item">
+                        <div class="research-title">The Good, the Bad, and the Ugly: Divergent Immune-Oncologic Journeys in Metastatic Clear Cell Renal Cell Carcinomas</div>
+                        <div class="research-meta">Apollo Hospital, 2025</div>
+                    </div>
+                    <div class="research-item">
+                        <div class="research-title">Rethinking Aggressive Care: ICU Outcomes, Mortality Predictions, and End-of-Life Choices in Geriatric Oncology</div>
+                        <div class="research-meta">Apollo Hospital, 2025</div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- SIDEBAR -->
+            <div class="sidebar">
+                <section>
+                    <h2 class="section-title">Skills & Competencies</h2>
+                    <div class="skill-list">
+                        Medical Oncology Practice<br>
+                        Chemotherapy Protocol Review<br>
+                        Oncology Treatment Pathways<br>
+                        Evidence-Based Decision Support<br>
+                        Regimen Interpretation & Sequencing<br>
+                        Anticancer Therapy Workflows<br>
+                        Adverse Event Monitoring<br>
+                        Multidisciplinary Coordination<br>
+                        Structured Clinical Content Review<br>
+                        Guideline-Based Treatment<br>
+                        Precision in Clinical Logic
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Education</h2>
+                    <div class="sidebar-item">
+                        <div class="sidebar-title">Doctor of Pharmacy (Pharm.D)</div>
+                        <div class="sidebar-meta">Rajiv Gandhi University of Health Sciences<br>2017 – 2023</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="sidebar-item" style="margin-bottom: 0.75rem;">
+                        <div class="sidebar-title" style="font-weight: 500;">IHC and GCP Certification</div>
+                        <div class="sidebar-meta">NIDA Clinical Trials Network</div>
+                    </div>
+                    <div class="sidebar-item" style="margin-bottom: 0.75rem;">
+                        <div class="sidebar-title" style="font-weight: 500;">Verification of Anti-Cancer Therapy</div>
+                        <div class="sidebar-meta">Clinical Research Solutions</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-title" style="font-weight: 500;">Anti-Microbial Stewardship</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Additional Experience</h2>
+                    <div class="skill-list" style="font-size: 0.85rem; line-height: 1.5;">
+                        <ul style="padding-left: 1rem; color: var(--text-primary);">
+                            <li style="margin-bottom: 0.5rem;">Served as speaker at international webinar: "Zolgensma: An Extortionate Wonder Drug."</li>
+                            <li style="margin-bottom: 0.5rem;">Presented clinical case on "LRTI-Influenza A/B with Type 1 Respiratory Failure" at Apollo Pinnacle.</li>
+                            <li style="margin-bottom: 0.5rem;">Delivered guest lecture on clinical pharmacy at Siddaganga College of Pharmacy.</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2 class="section-title">Languages</h2>
+                    <div class="sidebar-meta">
+                        English, Kannada, Hindi, Urdu, Telegu
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
