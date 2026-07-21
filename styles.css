@@ -577,7 +577,7 @@ input:checked + .slider:before {
     .hero-grid { gap: 2rem; }
     .hero-content { text-align: center; }
     .hero-content .eyebrow { text-align: center !important; }
-    .hero-actions { justify-content: center; }
+    .hero-actions { justify-content: center; flex-direction: column; }
     .bento-card.large { grid-column: span 1; grid-row: auto; }
     .hero-title { font-size: 2.5rem; }
     .hero-subtitle { font-size: 1.15rem; }
