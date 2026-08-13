@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Dr. Musarath Muskan, Pharm.D</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Apple-Style Minimalist Resume */
         :root {
@@ -45,10 +45,12 @@
         }
         
         .name {
-            font-size: 2.75rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 0.25rem;
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            font-weight: 400;
+            letter-spacing: 0;
+            margin-bottom: 0rem;
+            color: var(--text-primary);
         }
         
         .title {
@@ -89,9 +91,13 @@
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
-            margin-top: 2.5rem;
         }
-        .section-title:first-child { margin-top: 0; }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        section:last-child {
+            margin-bottom: 0;
+        }
 
         .job-item { margin-bottom: 2rem; }
         .job-header {
@@ -204,10 +210,22 @@
             <h1 class="name">Dr. Musarath Muskan</h1>
             <div class="title">Clinical Pharmacologist | Oncology Medical Affairs</div>
             <div class="contact-info">
-                <span><a href="mailto:musrathmuskan@gmail.com" style="color: inherit; text-decoration: none;">musrathmuskan@gmail.com</a></span>
-                <span><a href="tel:+917204271538" style="color: inherit; text-decoration: none;">+91 7204271538</a></span>
-                <span>Bengaluru, India</span>
-                <span><a href="https://www.linkedin.com/in/dr-musarath-muskan-1335891b9" target="_blank" style="color: inherit; text-decoration: none;">linkedin.com/in/dr-musarath-muskan</a></span>
+                <span style="display: flex; align-items: center; gap: 0.4rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                    <a href="mailto:musrathmuskan@gmail.com" style="color: inherit; text-decoration: none;">musrathmuskan@gmail.com</a>
+                </span>
+                <span style="display: flex; align-items: center; gap: 0.4rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 22.621l-3.521-6.795c-.007.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.082-1.026-3.492-6.817-2.106 1.039c-2.684 1.324-4.838 5.602-2.115 11.233 2.733 5.65 7.16 8.358 9.851 7.032l2.062-1.016 3.912.333z"/></svg>
+                    <a href="tel:+917204271538" style="color: inherit; text-decoration: none;">+91 7204271538</a>
+                </span>
+                <span style="display: flex; align-items: center; gap: 0.4rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+                    Bengaluru, India
+                </span>
+                <span style="display: flex; align-items: center; gap: 0.4rem;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <a href="https://www.linkedin.com/in/dr-musarath-muskan-1335891b9" target="_blank" style="color: inherit; text-decoration: none;">LinkedIn Profile</a>
+                </span>
             </div>
         </header>
 
@@ -237,6 +255,39 @@
                             <li>Evaluate and interpret continuous updates from NCCN Guidelines and translate clinical logic into structured JSON-based workflows.</li>
                             <li>Collaborate cross-functionally with engineering and clinical teams to validate decision support algorithms for clinical accuracy.</li>
                             <li>Ensure clinical systems remain aligned with the latest evidence-based oncology standards of care.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-item">
+                        <div class="job-header">
+                            <div class="job-title">Guest Lecturer (Part-time)</div>
+                            <div class="job-date">March 2024 – Present</div>
+                        </div>
+                        <div class="job-company">Sri Viswasai Nursing College</div>
+                        <ul class="job-bullets">
+                            <li>Teach pharmacology, pathology, and genetics to nursing students.</li>
+                            <li>Provide clinical insights into medicines, their appropriate use, and practical applications in daily life.</li>
+                            <li>Connect academic concepts with clinically relevant examples to strengthen students' understanding of drug-related topics.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-item">
+                        <div class="job-header">
+                            <div class="job-title">Co-Owner</div>
+                            <div class="job-date">Current | 13.2K+ followers</div>
+                        </div>
+                        <div class="job-company">
+                            Andaaz-e-Cinema 
+                            <a href="https://www.instagram.com/andaaz.e.cinema/" target="_blank" style="color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                @andaaz.e.cinema
+                            </a>
+                        </div>
+                        <ul class="job-bullets">
+                            <li>Co-own and manage a global cinema-focused social media page with a current audience of 13.2K+ followers.</li>
+                            <li>Contribute to content strategy, creation, publishing, and audience engagement covering cinema from around the world.</li>
+                            <li>Created and managed content with 10+ reels surpassing 1 million views, demonstrating strong understanding of viral content and audience engagement.</li>
+                            <li>Collaborate on movie and entertainment content to drive reach, engagement, and continued audience growth.</li>
                         </ul>
                     </div>
 
@@ -297,8 +348,14 @@
                         Adverse Event Monitoring<br>
                         Multidisciplinary Coordination<br>
                         Structured Clinical Content Review<br>
-                        Guideline-Based Treatment<br>
-                        Precision in Clinical Logic
+                        Digital Health Workflows<br>
+                        Pharmacology<br>
+                        Pathology<br>
+                        Genetics<br>
+                        Social Media Management<br>
+                        Content Strategy<br>
+                        Audience Engagement<br>
+                        Digital Content Creation
                     </div>
                 </section>
 
